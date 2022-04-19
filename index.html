@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang='en' class='notranslate' translate='no'>
+      <head>
+        <meta name='google' content='notranslate' />
+        <meta charset='UTF-8'>
+        <meta name='description' content='Using JavaScript to render image(s)'>
+        <meta name='keywords' content='Canvas,JavaScript,CSS,Image,HTML'>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0' />
+        <meta http-equiv='X-UA-Compatible' content='IE=Edge,chrome=1' />  
+        <meta http-equiv='Content-Language' content='en' />
+        <title>ʀᴇɴᴅᴇʀ ᴀɴ ɪᴍᴀɢᴇ ɪɴ ʜᴛᴍʟ5 | sʜᴏᴡᴄᴀsᴇs ᴍᴜʟᴛɪᴘʟᴇ ᴜɴɪɋᴜᴇ ɪᴍᴘʟᴇᴍᴇɴᴛᴀᴛɪᴏɴs</title>
+        <meta name='msapplication-TileColor' content='#ffffff' />
+        <meta name='theme-color' content='#ffffff' />
+        <meta name='apple-mobile-web-app-status-bar-style' content='black-translucent' />
+        <meta name='apple-mobile-web-app-capable' content='yes' />
+        <meta name='mobile-web-app-capable' content='yes' />
+        <meta name='HandheldFriendly' content='True' />
+        <meta name='MobileOptimized' content='320' />  
+        <meta http-equiv='Content-Security-Policy' content='upgrade-insecure-requests' /> 
+        <link href='css/bootstrap-4.5.2.min.css' rel='stylesheet' type='text/css' />
+        <link href='css/offcanvas.css' rel='stylesheet' type='text/css' />
+        <link href='css/main.css' rel='stylesheet' type='text/css' />
+        <link rel="icon" href="favicon-16x16.ico" type="image/x-icon" sizes="16x16">
+      </head>
+      <body>
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+        <div class='container-full'>
+            <div class='row'>
+                <div class='col-sm-6 col-12'>
+                  <div id='detailsCard' class="card rounded-0">
+                    <div class="card-header p-1"><button class='btn btn-sm text-dark border rounded-0 pr-2 pl-2' type='button' disabled><strong class='text-dark'>⛶</strong></button> <span>Window Screen Properties</span></div>
+                    <div class="card-body p-1">
+                        <table class='table table-bordered table-condensed w-100 small mb-0'>
+                            <tr>
+                                <th width='70%'><small class='lead small'><strong>Dimensions</strong></small> <small class='text-muted'>Width × Height</small></th>
+                                <td id='screenDimensions'></td>
+                            </tr>
+                            <tr>
+                                <th><small class='lead small'><strong>Available Dimensions</strong></small> <small class='text-muted'>Width × Height</small></th>
+                                <td id='availDimensions'></td>
+                            </tr>
+                            <tr>
+                                <th><small class='lead small'><strong>Color Depth</strong></small> <small class='text-muted'>Bit Depth</small></th>
+                                <td id='colorDepth'></td>
+                            </tr>
+                            <tr>
+                                <th><small class='lead small'><strong>Color Resolution</strong></small></th>
+                                <td id='colorResolution'></td>
+                            </tr>
+                            <tr>
+                                <th><small class='lead small'><strong>Device to CSS Pixel Ratio</strong></small></th>
+                                <td id='pixelDensity'></td>
+                            </tr>
+                        </table>
+                    </div>
+                  </div>
+                </div>
+
+                <div class='col-sm-6 col-12'>
+                  <div class="card rounded-0">
+                    <div class="card-header p-1"><button id='uploadImgBtn' class='btn btn-sm btn-light border-primary text-primary rounded-0 p-1' type='button'><small>┏🡩┓ Upload Image…</small><input id='uploadImg' type='file' /></button> </div>
+                    <div class="card-body p-1">
+                        <table class='table table-bordered table-condensed w-100 small mb-0'>
+                            <tr>
+                                <th width='70%'><small class='lead small'><strong>Name</strong></small></th>
+                                <td id='fileName'></td>
+                            </tr>
+                            <tr>
+                                <th><small class='lead small'><strong>Size</strong></small></th>
+                                <td id='fileSize'></td>
+                            </tr>
+                            <tr>
+                                <th><small class='lead small'><strong>Type</strong></small></th>
+                                <td id='fileType'></td>
+                            </tr>
+                            <tr>
+                                <th><small class='lead small'><strong>Dimensions</strong></small> <small class='text-muted'>Width × Height</small></th>
+                                <td id='imgDimensions'></td>
+                            </tr>
+                            <tr>
+                                <th><small class='lead small'><strong>Last Modified</strong></small></th>
+                                <td id='lastModified'></td>
+                            </tr>
+                        </table>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <hr>
+            <div id='imgRow' class="row">
+                <div class='col-sm-4 col-12 mt-1 mb-1'>
+                    <div class="card rounded-0 w-100 h-100">
+                        <div class="card-header p-1">❶ Image Tag <code>&lt;img /&gt;</code></div>
+                        <div id='imgCard' class="card-body p-1"></div>
+                    </div>
+                </div>
+
+                 <div class='col-sm-4 col-12 mt-1 mb-1'>
+                    <div class="card rounded-0 w-100 h-100">
+                        <div class="card-header p-1">❷ Assign CSS Property <code>background-image:url(…)</code></div>
+                        <div id='cssDIVCard' class="card-body m-1"></div>
+                    </div>
+                </div>
+
+                <div class='col-sm-4 col-12 mt-1 mb-1'>
+                    <div class="card rounded-0 w-100 h-100">
+                        <div class="card-header p-1">❸ Canvas Element <code>&lt;canvas&gt;&lt;canvas/&gt;</code></div>
+                        <div id='canvasCard' class="card-body p-1"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src='js/polyfill.js'></script>
+        <script src='js/ie10-viewport-bug-workaround.js'></script>
+        <script src='js/bootstrap-native-v4.js'></script>
+        <script src='js/main.js'></script>
+    </body>
+</html>
