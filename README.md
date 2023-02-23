@@ -12,22 +12,19 @@
   ### ℹ Implementation Overview
 
 </div>
-<div align="left">
-
-	### ❶ Image <img />
-
-	<img src='https://miro.medium.com/max/1050/1*ERqUcN_644r3ks1ViTzv4g.png' alt='Image Display' height='400' />
-
-	### ❷ Assign CSS Property — background-image: url(…)
-
-	<img src='https://miro.medium.com/max/1050/1*SfIcgtHOFrS71Jhd5HvxQw.png' alt='CSS Display' height='400' />
-
-	### ❸ Canvas Element <canvas></canvas>
-
-	<img src='https://miro.medium.com/max/1050/1*VRakVs1kOjUG0rO3yU9SEg.png' alt='CANVAS Display' height='400' />
-
 </div>
-</div>
+
+### ❶ Image <img />
+
+<img src='https://miro.medium.com/max/1050/1*ERqUcN_644r3ks1ViTzv4g.png' alt='Image Display' height='400' />
+
+### ❷ Assign CSS Property — background-image: url(…)
+
+<img src='https://miro.medium.com/max/1050/1*SfIcgtHOFrS71Jhd5HvxQw.png' alt='CSS Display' height='400' />
+
+### ❸ Canvas Element <canvas></canvas>
+
+<img src='https://miro.medium.com/max/1050/1*VRakVs1kOjUG0rO3yU9SEg.png' alt='CANVAS Display' height='400' />
 
 ### 🌟 Try it yourself!
 [**Live Demo :: Link**](https://incubated-geek-cc.github.io/HTML5-Image-Display/)
