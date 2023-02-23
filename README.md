@@ -1,7 +1,7 @@
 <div align="center">
   <img src="https://github.com/incubated-geek-cc/HTML5-Image-Display/raw/main/img/logo.png" width="96" alt="logo">
 
-  # 🔎 HTML5 Image Display
+  # 💠 HTML5 Image Display
 
   ### 🧰 Web application was built with <strong>HTML5</strong> and <strong>Client-Side JavaScript</strong>.
 
