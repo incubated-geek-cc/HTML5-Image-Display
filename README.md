@@ -30,7 +30,7 @@
 [**Live Demo :: Link**](https://incubated-geek-cc.github.io/HTML5-Image-Display/)
 
 ### ✍ Read related post here
-[**Article :: Link**](https://geek-cc.medium.com/3-ways-to-display-an-image-onto-browser-with-client-side-javascript-6653d94680a7)
+[**Article :: Link :: 3 Ways To Display An Image onto Browser With Client-Side JavaScript**](https://geek-cc.medium.com/3-ways-to-display-an-image-onto-browser-with-client-side-javascript-6653d94680a7)
 
 ### 👀 Preview
 <img src='https://miro.medium.com/max/1050/1*Kmt1u1htE0KH6OJnT_TxXw.png' width="800px" />
